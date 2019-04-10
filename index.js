@@ -1,9 +1,9 @@
 import { serve } from "https://deno.land/std@v0.3.2/http/server.ts";
 import { render } from 'https://deno.land/x/dejs/dejs.ts';
-import * as webpack from 'https://unpkg.com/webpack@4.29.6/lib/webpack.js';
-console.log(webpack)
+import parseDat from './ast-parser.js';
+const webpack = parseDat('https://unpkg.com/webpack@4.29.6/lib/webpack.js');
 
-const template = `<body>
+/* const template = `<body>
   <% if (name) { %>
     <h1>hello, <%= name %>!</h1>
   <% } %>
@@ -22,4 +22,4 @@ async function main() {
     }
 }
 
-main();
+main(); */
